@@ -1,0 +1,23 @@
+"PAKDD":
+  url: http://pakdd.net/
+  color: "#848482"
+
+"NeurIPS":
+  url: https://neurips.cc/
+  color: "#0048BA"
+
+"EMNLP":
+  url: https://aclanthology.org/venues/emnlp/
+  color: "#F29105"
+
+"CVPR":
+  url: https://cvpr.thecvf.com/
+  color: "#B284BE"
+
+"AISTATS":
+  url: http://aistats.org/aistats2023/
+  color: "E00422"
+
+
+"Preprint":
+  color: "#ffdddd"

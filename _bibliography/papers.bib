@@ -1,0 +1,121 @@
+@article{nguyen2023flat,
+  abbr = {NeurIPS},
+  title={Flat Seeking Bayesian Neural Networks},
+  author={Nguyen, Anh and Vuong, Long and Phan, Hoang and Do, Toan and Phung, Dinh and Le, Trung},
+  selected = {true},
+  journal={Advances in Neural Information Processing Systems},
+  published={true},
+  pdf={https://arxiv.org/abs/2302.02713},
+  abstract={Bayesian Neural Networks (BNNs) offer a probabilistic interpretation for deep learning models by imposing a prior distribution over model parameters and inferencing a posterior distribution based on observed data. The model sampled from the posterior distribution can be used for providing ensemble predictions and quantifying prediction uncertainty. It is well-known that deep learning models with a lower sharpness have a better generalization ability. Nonetheless, existing posterior inferences are not aware of sharpness/flatness, hence possibly leading to high sharpness for the models sampled from it. In this paper, we develop theories, the Bayesian setting, and the variational inference approach for the sharpness-aware posterior. Specifically, the models sampled from our sharpness-aware posterior and the optimal approximate posterior estimating this sharpness-aware posterior have a better flatness, hence possibly possessing a higher generalization ability. We conduct experiments by leveraging the sharpness-aware posterior with the state-of-the-art Bayesian Neural Networks, showing that the flat-seeking counterparts outperform their baselines in all metrics of interest.},
+  year={2023}
+}
+
+
+
+@article{tran2023sharpness,
+  abbr = {Preprint},
+  title={Sharpness \& Shift-Aware Self-Supervised Learning},
+  author={Tran, Ngoc N and Duong, Son and Phan, Hoang and Pham, Tung and Phung, Dinh and Le, Trung},
+  journal={arXiv preprint arXiv:2305.10252},
+  selected = {true},
+  published={true},
+  pdf={https://arxiv.org/abs/2305.10252},
+  abstract={Self-supervised learning aims to extract meaningful features from unlabeled data for further downstream tasks. In this paper, we consider classification as a downstream task in phase 2 and develop rigorous theories to realize the factors that implicitly influence the general loss of this classification task. Our theories signify that sharpness-aware feature extractors benefit the classification task in phase 2 and the existing data shift between the ideal (i.e., the ideal one used in theory development) and practical (i.e., the practical one used in implementation) distributions to generate positive pairs also remarkably affects this classification task. Further harvesting these theoretical findings, we propose to minimize the sharpness of the feature extractor and a new Fourier-based data augmentation technique to relieve the data shift in the distributions generating positive pairs, reaching Sharpness \& Shift-Aware Contrastive Learning (SSA-CLR). We conduct extensive experiments to verify our theoretical findings and demonstrate that sharpness \& shift-aware contrastive learning can remarkably boost the performance as well as obtaining more robust extracted features compared with the baselines.},
+  year={2023}
+}
+
+
+@article{phan2022global,
+  abbr = {AISTATS},
+  title={Global-Local Regularization Via Distributional Robustness},
+  author={Phan, Hoang and Le, Trung and Phung, Trung and Bui, Tuan Anh and Ho, Nhat and Phung, Dinh},
+  journal={Proceedings of The 26th International Conference on Artificial Intelligence and Statistics},
+  selected = {true},
+  published={true},
+  code={https://github.com/VietHoang1512/GLOT},
+  pdf={https://arxiv.org/abs/2203.00553},
+  abstract={Despite superior performance in many situations, deep neural networks are often vulnerable to adversarial examples and distribution shifts, limiting model generalization ability in real-world applications. To alleviate these problems, recent approaches leverage distributional robustness optimization (DRO) to find the most challenging distribution, and then minimize loss function over this most challenging distribution. Regardless of achieving some improvements, these DRO approaches have some obvious limitations. First, they purely focus on local regularization to strengthen model robustness, missing a global regularization effect which is useful in many real-world applications (e.g., domain adaptation, domain generalization, and adversarial machine learning). Second, the loss functions in the existing DRO approaches operate in only the most challenging distribution, hence decouple with the original distribution, leading to a restrictive modeling capability. In this paper, we propose a novel regularization technique, following the veins of Wasserstein-based DRO framework. Specifically, we define a particular joint distribution and Wasserstein-based uncertainty, allowing us to couple the original and most challenging distributions for enhancing modeling capability and applying both local and global regularizations. Empirical studies on different learning problems demonstrate that our proposed approach significantly outperforms the existing regularization approaches in various domains: semi-supervised learning, domain adaptation, domain generalization, and adversarial machine learning.},
+  year={2023}
+}
+
+
+@article{phan2022improving,
+  abbr = {Preprint},
+  title={Improving Multi-task Learning via Seeking Task-based Flat Regions},
+  author={Phan, Hoang and Tran, Lam and Tran, Ngoc and Ho, Nhat and Phung, Dinh and Le, Trung},
+  selected = {true},
+  journal={arXiv preprint arXiv:2211.13723 },
+  published={true},
+  pdf={https://arxiv.org/abs/2211.13723},
+  abstract={Multi-Task Learning (MTL) is a widely-used and powerful learning paradigm for training deep neural networks that allows learning more than one objective by a single backbone. Compared to training tasks separately, MTL significantly reduces computational costs, improves data efficiency, and potentially enhances model performance by leveraging knowledge across tasks. Hence, it has been adopted in a variety of applications, ranging from computer vision to natural language processing and speech recognition. Among them, there is an emerging line of work in MTL that focuses on manipulating the task gradient to derive an ultimate gradient descent direction to benefit all tasks. Despite achieving impressive results on many benchmarks, directly applying these approaches without using appropriate regularization techniques might lead to suboptimal solutions on real-world problems. In particular, standard training that minimizes the empirical loss on the training data can easily suffer from overfitting to low-resource tasks or be spoiled by noisy-labeled ones, which can cause negative transfer between tasks and overall performance drop. To alleviate such problems, we propose to leverage a recently introduced training method, named Sharpness-aware Minimization, which can enhance model generalization ability on single-task learning. Accordingly, we present a novel MTL training methodology, encouraging the model to find task-based flat minima for coherently improving its generalization capability on all tasks. Finally, we conduct comprehensive experiments on a variety of applications to demonstrate the merit of our proposed approach to existing gradient-based MTL methods, as suggested by our developed theory.},
+  year={2022}
+}
+
+@article{tran2022continual,
+  abbr = {Preprint},
+  title={Continual Learning with Optimal Transport based Mixture Model},
+  author={Tran, Quyen and Phan, Hoang  and Than, Khoat and Phung, Dinh and Le, Trung},
+  selected = {true},
+  published={true},
+  journal={arXiv preprint arXiv:2211.16780 },
+  pdf={https://arxiv.org/abs/2211.16780},
+  abstract={Online Class Incremental learning (CIL) is a challenging setting in Continual Learning (CL), wherein data of new tasks arrive in incoming streams and online learning models need to handle incoming data streams without revisiting previous ones. Existing works used a single centroid adapted with incoming data streams to characterize a class. This approach possibly exposes limitations when the incoming data stream of a class is naturally multimodal. To address this issue, in this work, we first propose an online mixture model learning approach based on nice properties of the mature optimal transport theory (OT-MM). Specifically, the centroids and covariance matrices of the mixture model are adapted incrementally according to incoming data streams. The advantages are two-fold: (i)  we can characterize more accurately complex data streams and (ii) by using centroids for each class produced by OT-MM, we can estimate the similarity of an unseen example to each class more reasonably when doing inference. Moreover, to combat the catastrophic forgetting in the CIL scenario, we further propose Dynamic Preservation. Particularly, after performing the dynamic preservation technique across data streams, the latent representations of the classes in the old and new tasks become more condensed themselves and more separate from each other. Together with a contraction feature extractor, this technique facilitates the model in mitigating the catastrophic forgetting. The experimental results on real-world datasets show that our proposed method can significantly outperform the current state-of-the-art baselines.},
+  year={2022}
+}
+
+@article{phan2022stochastic,
+  abbr = {NeurIPS},
+  title={Stochastic Multiple Target Sampling Gradient Descent},
+  author={Phan, Hoang and Tran, Ngoc and Le, Trung and Tran, Toan and Ho, Nhat and Phung, Dinh},
+  journal={Advances in Neural Information Processing Systems },
+  year={2022},
+  pdf={https://arxiv.org/abs/2206.01934},
+  code={https://github.com/VietHoang1512/MT-SGD},
+  abstract={Sampling from an unnormalized target distribution is an essential problem with many applications in probabilistic inference. Stein Variational Gradient Descent (SVGD) has been shown to be a powerful method that iteratively updates a set of particles to approximate the distribution of interest. Furthermore, when analysing its asymptotic properties, SVGD reduces exactly to a single-objective optimization problem and can be viewed as a probabilistic version of this single-objective optimization problem. A natural question then arises: "Can we derive a probabilistic version of the multi-objective optimization?". To answer this question, we propose Stochastic Multiple Target Sampling Gradient Descent (MT-SGD), enabling us to sample from multiple unnormalized target distributions. Specifically, our MT-SGD conducts a flow of intermediate distributions gradually orienting to multiple target distributions, which allows the sampled particles to move to the joint high-likelihood region of the target distributions. Interestingly, the asymptotic analysis shows that our approach reduces exactly to the multiple-gradient descent algorithm for multi-objective optimization, as expected. Finally, we conduct comprehensive experiments to demonstrate the merit of our approach to multi-task learning.},
+  selected = {true},
+  published={true},
+  year={2022}
+}
+
+@article{phan2022reducing,
+  abbr = {PAKDD},
+  title={Reducing Catastrophic Forgetting in Neural Networks via Gaussian Mixture Approximation},
+  author={Phan, Hoang and Tuan, Anh Phan and Nguyen, Son and Linh, Ngo Van and Than, Khoat},
+  journal={Advances in Knowledge Discovery and Data Mining. PAKDD. Lecture Notes in Computer Science. Springer },
+  selected = {true},
+  published={true},
+  pdf={PAKDD_paper.pdf},
+  code={https://github.com/anhpt1997/ucb_cl},
+  abstract={Our paper studies the continual learning (CL) problems in which data comes in sequence and the trained models are expected to be capable of utilizing existing knowledge to solve new tasks without losing performance on previous ones. This also poses a central difficulty in the field of CL, termed as Catastrophic Forgetting (CF). In an attempt to address this problem, Bayesian methods provide a powerful principle, focusing on the inference scheme to estimate the importance of weights. Variational inference (VI), one of the most widely used methods within this vein, approximates the intractable posterior by a factorized distribution, thus offering computational efficiency. Notwithstanding many state-of-the-art performances in practice, this simple assumption about the posterior distribution typically limits the model capacity to some extent. In this paper, we introduce a novel approach to mitigate forgetting in the Bayesian approach via enriching the posterior distribution with mixture models, which intuitively promotes neural networks to acquire knowledge from multiple tasks at a time. Moreover, in order to reduce the model’s complexity growth when the number of components increases, we propose a solution that conducts low-rank decomposition on the variance of each component based on neural matrix factorization. Extensive experiments show that our method yields significant improvements compared to prior works on different benchmarks.},
+  pages={106--117},
+  year={2022},
+  organization={Springer}
+}
+
+@article{phan2021matching,
+  abbr = {EMNLP},
+  title={Matching the statements: A simple and accurate model for key point analysis},
+  author={Phan, Hoang and Nguyen, Long and Doan, Khanh},
+  journal={Proceedings of the 8th Workshop on Argument Mining },
+  selected = {true},
+  pdf={https://aclanthology.org/2021.argmining-1.17/},
+  code={https://github.com/VietHoang1512/KPA},
+  abstract={Key Point Analysis (KPA) is one of the most essential tasks in building an Opinion Summarization system, which is capable of generating key points for a collection of arguments toward a particular topic. Furthermore, KPA allows quantifying the coverage of each summary by counting its matched arguments. With the aim of creating high-quality summaries, it is necessary to have an in-depth understanding of each individual argument as well as its universal semantic in a specified context. In this paper, we introduce a promising model, named Matching the Statements (MTS) that incorporates the discussed topic information into arguments/key points comprehension to fully understand their meanings, thus accurately performing ranking and retrieving best-match key points for an input argument. Our approach has achieved the 4th place in Track 1 of the Quantitative Summarization – Key Point Analysis Shared Task by IBM, yielding a competitive performance of 0.8956 (3rd) and 0.9632 (7th) strict and relaxed mean Average Precision, respectively.},
+  published={true},
+  pages={165--174},
+  year={2021}
+  }
+
+@article{nguyen2021contrastive,
+  abbr = {CVPR},
+  title={Contrastive learning for natural language-based vehicle retrieval},
+  author={Nguyen, Tam and Pham, Quang and Doan, Linh  and Trinh, Hoang  and Nguyen, Anh and Phan, Hoang},
+  journal={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops },
+  selected = {true},
+  published={true},
+  pdf={https://openaccess.thecvf.com/content/CVPR2021W/AICity/html/Nguyen_Contrastive_Learning_for_Natural_Language-Based_Vehicle_Retrieval_CVPRW_2021_paper.html},
+  code={https://github.com/VietHoang1512/CVPR-track-5},
+  abstract={AI City Challenge 2021 Task 5: The Natural Language-Based Vehicle Tracking is a Natural Language-based Vehicle Retrieval task, which requires retrieving a single-camera track using a set of three natural language descriptions of the specific targets. In this paper, we present our methods to tackle the difficulties of the provided task. Experiments with our approaches on the competitive dataset from AICity Challenge 2021 show that our techniques achieve Mean Reciprocal Rank score of 0.1701 on the public test dataset and 0.1571 on the private test dataset.},
+  pages={4245--4252},
+  year={2021}
+  }
