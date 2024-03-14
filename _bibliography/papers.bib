@@ -1,3 +1,14 @@
+@article{phan2024controllable,
+  abbr = {Preprint},
+  title={Controllable Prompt Tuning For Balancing Group Distributional Robustness},
+  author={Phan, Hoang and Wilson, Andrew Gordon and Lei, Qi},
+  journal={arXiv preprint arXiv:2403.02695},
+  pdf={https://arxiv.org/abs/2403.02695},
+  abstract={Models trained on data composed of different groups or domains can suffer from severe performance degradation under distribution shifts. While recent methods have largely focused on optimizing the worst-group objective, this often comes at the expense of good performance on other groups. To address this problem, we introduce an optimization scheme to achieve good performance across groups and find a good solution for all without severely sacrificing performance on any of them. However, directly applying such optimization involves updating the parameters of the entire network, making it both computationally expensive and challenging. Thus, we introduce Controllable Prompt Tuning (CPT), which couples our approach with prompt-tuning techniques. On spurious correlation benchmarks, our procedures achieve state-of-the-art results across both transformer and non-transformer architectures, as well as unimodal and multimodal data, while requiring only 0.4\% tunable parameters.},
+  published={true},
+  year={2024}
+}
+
 @article{tran2023sharpness,
   abbr = {Preprint},
   title={Robust Contrastive Learning With Theory Guarantee},
@@ -82,7 +93,6 @@
   title={Stochastic Multiple Target Sampling Gradient Descent},
   author={Phan, Hoang and Tran, Ngoc and Le, Trung and Tran, Toan and Ho, Nhat and Phung, Dinh},
   journal={Advances in Neural Information Processing Systems },
-  year={2022},
   pdf={https://arxiv.org/abs/2206.01934},
   code={https://github.com/VietHoang1512/MT-SGD},
   abstract={Sampling from an unnormalized target distribution is an essential problem with many applications in probabilistic inference. Stein Variational Gradient Descent (SVGD) has been shown to be a powerful method that iteratively updates a set of particles to approximate the distribution of interest. Furthermore, when analysing its asymptotic properties, SVGD reduces exactly to a single-objective optimization problem and can be viewed as a probabilistic version of this single-objective optimization problem. A natural question then arises: "Can we derive a probabilistic version of the multi-objective optimization?". To answer this question, we propose Stochastic Multiple Target Sampling Gradient Descent (MT-SGD), enabling us to sample from multiple unnormalized target distributions. Specifically, our MT-SGD conducts a flow of intermediate distributions gradually orienting to multiple target distributions, which allows the sampled particles to move to the joint high-likelihood region of the target distributions. Interestingly, the asymptotic analysis shows that our approach reduces exactly to the multiple-gradient descent algorithm for multi-objective optimization, as expected. Finally, we conduct comprehensive experiments to demonstrate the merit of our approach to multi-task learning.},
