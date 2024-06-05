@@ -18,6 +18,9 @@
   url: http://aistats.org/aistats2023/
   color: "E00422"
 
+"ICML":
+  url: https://icml.cc/
+  color: "#4E6C50"
 
 "Preprint":
   color: "#ffdddd"
