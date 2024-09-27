@@ -1,3 +1,45 @@
+@article{,
+  abbr = {NeurIPS},
+  title={Sketchy Moment Matching: Toward Fast and Provable Data Selection for Finetuning},
+  author={Dong*, Yijun and Phan*, Hoang and  Pan*, Xiang  and  Lei, Qi},
+  selected = {true},
+  journal={Advances in Neural Information Processing Systems},
+  published={true},
+  pdf={https://arxiv.org/abs/2407.06120},
+  abstract={We revisit data selection in a modern context of finetuning from a fundamental perspective. Extending the classical wisdom of variance minimization in low dimensions to high-dimensional finetuning, our generalization analysis unveils the importance of additionally reducing bias induced by low-rank approximation.
+    Inspired by the variance-bias tradeoff in high dimensions from the theory, we introduce \b{Sk}etchy \b{M}oment \b{M}atching (SkMM), a scalable data selection scheme with two stages.
+    (i) First, the bias is controlled using gradient sketching that explores the finetuning parameter space for an informative low-dimensional subspace $\mathcal{S}$;
+    (ii) then the variance is reduced over $\mathcal{S}$ via moment matching between the original and selected datasets.
+    Theoretically, we show that gradient sketching is fast and provably accurate: selecting $n$ samples by reducing variance over $\mathcal{S}$ preserves the fast-rate generalization $O(\dim(\mathcal{S})/n)$, independent of the parameter dimension. Empirically, we concretize the variance-bias balance via synthetic experiments and demonstrate the effectiveness of SkMM for finetuning in real vision tasks.},
+  year={2024}
+}
+
+@article{,
+  abbr = {NeurIPS},
+  title={Enhancing Domain Adaptation through Prompt Gradient Alignment},
+  author={Phan*, Hoang and  Lam Tran* and Tran*, Quyen and  Le, Trung},
+  selected = {true},
+  journal={Advances in Neural Information Processing Systems},
+  code={https://github.com/VietHoang1512/PGA},
+  published={true},
+  pdf={https://arxiv.org/abs/2406.09353},
+  abstract={Prior Unsupervised Domain Adaptation (UDA) methods often aim to train a domain-invariant feature extractor, which may hinder the model from learning sufficiently discriminative features. To tackle this, a line of works based on prompt learning leverages the power of large-scale pre-trained vision-language models to learn both domain-invariant and specific features through a set of domain-agnostic and domain-specific learnable prompts. Those studies typically enforce invariant constraints on representation, output, or prompt space to learn such prompts. Differently, we cast UDA as a multiple-objective optimization problem in which each objective is represented by a domain loss. Under this new framework, we propose aligning per-objective gradients to foster consensus between them. Additionally, to prevent potential overfitting when fine-tuning this deep learning architecture, we penalize the norm of these gradients. To achieve these goals, we devise a practical gradient update procedure that can work under both single-source and multi-source UDA. Empirically, our method consistently surpasses other prompt-based baselines by a large margin on different UDA benchmarks},
+  year={2024}
+}
+
+
+
+@article{,
+  abbr = {NeurIPS},
+  title = {DiMSUM: Diffusion Mamba - A Scalable and Unified Spatial-Frequency Method for Image Generation},
+  author = {Phung*, Hao and Dao*, Quan and Dao, Trung and Phan, Hoang and Metaxas, Dimitris N. and Tran, Anh},
+  selected = {true},
+  journal={Advances in Neural Information Processing Systems},
+  published={true},
+  abstract={Our approach presents a novel state-space architecture for diffusion models, effectively harnessing spatial and frequency information to enhance the inductive bias towards local features in input images for image generation tasks. While state-space networks, including Mamba, a revolutionary advancement in recurrent neural networks, typically scan input sequences from left to right, they face difficulties with manually-defined scanning orders, especially in the processing of visual data. Our method demonstrates that integrating wavelet transformation into Mamba enhances the local structure awareness of visual inputs by disentangling them into wavelet subbands, representing both low- and high-frequency components. These wavelet-based outputs are then processed and seamlessly fused with the original Mamba outputs through a cross-attention fusion layer, combining both spatial and frequency information to optimize the order awareness of state-space models which is essential for the details and overall quality of image generation. Besides, we introduce a globally-shared transformer to supercharge the performance of Mamba, harnessing its exceptional power to capture global relationships. Through extensive experiments on standard benchmarks, our method demonstrates state-of-the-art results, achieving faster training convergence, and delivering high-quality outputs.},
+  year={2024}
+}
+
 @article{phan2024controllable,
   abbr = {ICML},
   title={Controllable Prompt Tuning For Balancing Group Distributional Robustness},
@@ -105,7 +147,7 @@
 @article{phan2022reducing,
   abbr = {PAKDD},
   title={Reducing Catastrophic Forgetting in Neural Networks via Gaussian Mixture Approximation},
-  author={Phan, Hoang and Tuan, Anh Phan and Nguyen, Son and Linh, Ngo Van and Than, Khoat},
+  author={Phan*, Hoang and Tuan Anh*, Phan and Nguyen*, Son and Linh, Ngo Van and Than, Khoat},
   journal={Advances in Knowledge Discovery and Data Mining. PAKDD. Lecture Notes in Computer Science. Springer },
   selected = {true},
   published={true},
