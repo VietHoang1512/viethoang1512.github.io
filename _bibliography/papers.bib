@@ -1,3 +1,129 @@
+@article{phan2025beyond,
+  abbr = {ICCV},
+  title     = {Beyond Losses Reweighting: Empowering Multi-Task Learning via the Generalization Perspective},
+  author    = {Phan*, Hoang and Tran*, Lam and Tran, Quyen and Tran, Ngoc N. and Truong, Tuan and Lei, Qi and Ho, Nhat and Phung, Dinh and Le, Trung},
+  selected = {true},
+  journal={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  code={https://arxiv.org/abs/2211.13723},
+  published={true},
+  pdf={https://github.com/VietHoang1512/FS-MTL},
+  abstract={Multi-task learning (MTL) trains deep neural networks to optimize several objectives simultaneously using a shared backbone, which leads to reduced computational costs, improved data efficiency, and enhanced performance through cross-task knowledge sharing. Although recent gradient manipulation techniques aim to find a common descent direction that benefits all tasks, conventional empirical loss minimization still leaves models vulnerable to overfitting and gradient conflicts. To address this, we introduce a novel MTL framework that leverages weight perturbation to regulate gradient norms, thus improving generalization. By carefully modulating weight perturbations, our approach harmonizes task-specific gradients, reducing conflicts and encouraging more robust learning across tasks. Theoretical insights reveal that controlling the gradient norm through weight perturbation directly contributes to better generalization. Extensive experiments across diverse applications demonstrate that our method significantly outperforms existing gradient-based MTL techniques in terms of task performance and overall model robustness.},
+  year={2025},
+  award={Highlight}
+}
+
+
+@article{phan2025toward,
+  abbr = {ICCV},
+  title={Toward a Holistic Approach to Continual Model Merging},
+  author={Hoang Phan and Sungmin Cha and Tung Lam Tran and Qi Lei},
+  selected = {true},
+  journal={Workshop on Continual Learning in Computer Vision},
+  code={https://openreview.net/forum?id=VtPXzFZcGS},
+  published={true},
+  pdf={https://github.com/VietHoang1512/CMM},
+  abstract={We present a Holistic framework for Continual Model Merging (HCMM) that operates at three stages: pre-merging, during merging, and post-merging - to address two fundamental challenges in continual learning. Conventional approaches either maintain a growing list of per-domain task vectors, causing scalability issues, or rely solely on weight-space merging without access to old data, thereby losing crucial functional information. Our method overcomes these limitations by fine-tuning the main model within its tangent space on domain-specific data; the linearization promotes per-task weight disentanglement, effectively mitigating across-task interference. During merging, we leverage functional information from available optimizer states beyond mere parameter averaging to avoid the need to revisit old data. Finally, a post-merging correction aligns the representation discrepancy between pre- and post-merged models, reducing bias and enhancing overall performance—all while operating under constant memory constraints without accessing historical data. Extensive experiments on standard class-incremental and domain-incremental benchmarks demonstrate that our approach not only achieves competitive performance but also provides a scalable and efficient solution to the catastrophic forgetting problem.},
+  year={2025}
+}
+
+@article{pham2024personalized,
+  abbr={CVPR},
+  title={Personalized Large Vision-Language Models},
+  author={Pham, Chau and Phan, Hoang and Doermann, David and Tian, Yunjie},
+  journal={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
+  year={2025},
+  code={https://github.com/chaupham1709/PLVM},
+  published={true},
+  pdf={https://arxiv.org/abs/2412.17610},
+  abstract={The personalization model has gained significant attention in image generation yet remains underexplored for large vision-language models (LVLMs).
+  Beyond generic ones, with personalization,
+  LVLMs handle interactive dialogues using referential concepts (e.g., ``Mike and Susan are talking.'')
+  instead of the generic form (e.g., ``a boy and a girl are talking.''),
+  making the conversation more customizable and referentially friendly.
+  In addition, PLVM is equipped to continuously add new concepts during a dialogue without incurring additional costs, which significantly enhances the practicality. PLVM proposes Aligner, a pre-trained visual encoder to align referential concepts with the queried images. During the dialogues, it extracts features of reference images with these corresponding concepts and recognizes them in the queried image, enabling personalization. We note that the computational cost and parameter count of the Aligner are negligible within the entire framework. With comprehensive qualitative and quantitative analyses, we reveal the effectiveness and superiority of PLVM.}
+}
+
+@article{vuong2025preserving,
+  abbr = {CVPR},
+  title={Preserving Clusters in Prompt Learning for Unsupervised Domain Adaptation},
+  author={Vuong, Tung-Long and Phan, Hoang and Vo, Vy and Bui, Anh and Do, Thanh-Toan and Le, Trung and Phung, Dinh},
+  selected = {true},
+  journal={Proceedings of the Computer Vision and Pattern Recognition Conference},
+  code={https://github.com/VuongLong/Clustering-Reinforcement-Prompt-Learning},
+  published={true},
+  pdf={https://arxiv.org/abs/2506.11493},
+  abstract={Recent approaches leveraging multi-modal pre-trained models like CLIP for Unsupervised Domain Adaptation (UDA) have shown significant promise in bridging domain gaps and improving generalization by utilizing rich semantic knowledge and robust visual representations learned through extensive pre-training on diverse image-text datasets. While these methods achieve state-of-the-art performance across benchmarks, much of the improvement stems from base pseudo-labels (CLIP zero-shot predictions) and self-training mechanisms. Thus, the training mechanism exhibits a key limitation wherein the visual embedding distribution in target domains can deviate from the visual embedding distribution in the pre-trained model, leading to misguided signals from class descriptions. This work introduces a fresh solution to reinforce these pseudo-labels and facilitate target-prompt learning, by exploiting the geometry of visual and text embeddings - an aspect that is overlooked by existing methods. We first propose to directly leverage the reference predictions (from source prompts) based on the relationship between source and target visual embeddings. We later show that there is a strong clustering behavior observed between visual and text embeddings in pre-trained multi-modal models. Building on optimal transport theory, we transform this insight into a novel strategy to enforce the clustering property in text embeddings, further enhancing the alignment in the target domain. Our experiments and ablation studies validate the effectiveness of the proposed approach, demonstrating superior performance and improved quality of target prompts in terms of representation.},
+  year={2025}
+}
+
+
+@article{phan2024revisit,
+  abbr = {Preprint},
+  title={Revisiting Data Mixing Through the Lens of Multi-Objective Optimization},
+  author={Phan, Hoang},
+  selected = {true},
+  published={true},
+  pdf={Data_mixing.pdf},
+  abstract={Effective pretraining of large language models (LLMs) relies significantly on the strategic composition of training data from various sources. Traditional domain weighting approaches often focus on minimizing either average empirical loss or worst-case domain loss, which can lead to overfitting to either simple or complex domains. To address these limitations, we recast data mixing as a multi-objective optimization problem, enabling the application of multi-objective optimization theory. Furthermore, we propose a hybrid method that leverages both data resampling and domain loss reweighting to directly address the mismatch between the training of proxy models and their base counterparts. Empirically, we evaluate our methodology against established baselines on The Pile, SlimPajama, and Wiki40b datasets, demonstrating its superiority in enhancing performance across diverse domains by speeding up the convergence of the 1B model to $40\%$ compared to traditional training. Our extensive experiments show that our approach not only improves modeling ability across training domains but also surpasses prior methods on downstream tasks.},
+  year={2024}
+}
+
+
+@article{dong2024sketchy,
+  abbr = {NeurIPS},
+  title={Sketchy Moment Matching: Toward Fast and Provable Data Selection for Finetuning},
+  author={Dong*, Yijun and Phan*, Hoang and  Pan*, Xiang  and  Lei, Qi},
+  selected = {true},
+  journal={Advances in Neural Information Processing Systems},
+  published={true},
+  pdf={https://arxiv.org/abs/2407.06120},
+  code={https://github.com/Xiang-Pan/sketchy_moment_matching},
+  abstract={We revisit data selection in a modern context of finetuning from a fundamental perspective. Extending the classical wisdom of variance minimization in low dimensions to high-dimensional finetuning, our generalization analysis unveils the importance of additionally reducing bias induced by low-rank approximation.
+    Inspired by the variance-bias tradeoff in high dimensions from the theory, we introduce \b{Sk}etchy \b{M}oment \b{M}atching (SkMM), a scalable data selection scheme with two stages.
+    (i) First, the bias is controlled using gradient sketching that explores the finetuning parameter space for an informative low-dimensional subspace $\mathcal{S}$;
+    (ii) then the variance is reduced over $\mathcal{S}$ via moment matching between the original and selected datasets.
+    Theoretically, we show that gradient sketching is fast and provably accurate: selecting $n$ samples by reducing variance over $\mathcal{S}$ preserves the fast-rate generalization $O(\dim(\mathcal{S})/n)$, independent of the parameter dimension. Empirically, we concretize the variance-bias balance via synthetic experiments and demonstrate the effectiveness of SkMM for finetuning in real vision tasks.},
+  year={2024}
+}
+
+@article{phan2024enhancing,
+  abbr = {NeurIPS},
+  title={Enhancing Domain Adaptation through Prompt Gradient Alignment},
+  author={Phan*, Hoang and  Lam Tran* and Tran*, Quyen and  Le, Trung},
+  selected = {true},
+  journal={Advances in Neural Information Processing Systems},
+  code={https://github.com/VietHoang1512/PGA},
+  published={true},
+  pdf={https://arxiv.org/abs/2406.09353},
+  abstract={Prior Unsupervised Domain Adaptation (UDA) methods often aim to train a domain-invariant feature extractor, which may hinder the model from learning sufficiently discriminative features. To tackle this, a line of works based on prompt learning leverages the power of large-scale pre-trained vision-language models to learn both domain-invariant and specific features through a set of domain-agnostic and domain-specific learnable prompts. Those studies typically enforce invariant constraints on representation, output, or prompt space to learn such prompts. Differently, we cast UDA as a multiple-objective optimization problem in which each objective is represented by a domain loss. Under this new framework, we propose aligning per-objective gradients to foster consensus between them. Additionally, to prevent potential overfitting when fine-tuning this deep learning architecture, we penalize the norm of these gradients. To achieve these goals, we devise a practical gradient update procedure that can work under both single-source and multi-source UDA. Empirically, our method consistently surpasses other prompt-based baselines by a large margin on different UDA benchmarks},
+  year={2024}
+}
+
+
+
+@article{phung2024dimsum,
+  abbr = {NeurIPS},
+  title = {DiMSUM: Diffusion Mamba - A Scalable and Unified Spatial-Frequency Method for Image Generation},
+  author = {Phung*, Hao and Dao*, Quan and Dao, Trung and Phan, Hoang and Metaxas, Dimitris N. and Tran, Anh},
+  selected = {true},
+  journal={Advances in Neural Information Processing Systems},
+  code={https://github.com/VinAIResearch/DiMSUM},
+  published={true},
+  pdf={https://arxiv.org/abs/2411.04168},
+  abstract={Our approach presents a novel state-space architecture for diffusion models, effectively harnessing spatial and frequency information to enhance the inductive bias towards local features in input images for image generation tasks. While state-space networks, including Mamba, a revolutionary advancement in recurrent neural networks, typically scan input sequences from left to right, they face difficulties with manually-defined scanning orders, especially in the processing of visual data. Our method demonstrates that integrating wavelet transformation into Mamba enhances the local structure awareness of visual inputs by disentangling them into wavelet subbands, representing both low- and high-frequency components. These wavelet-based outputs are then processed and seamlessly fused with the original Mamba outputs through a cross-attention fusion layer, combining both spatial and frequency information to optimize the order awareness of state-space models which is essential for the details and overall quality of image generation. Besides, we introduce a globally-shared transformer to supercharge the performance of Mamba, harnessing its exceptional power to capture global relationships. Through extensive experiments on standard benchmarks, our method demonstrates state-of-the-art results, achieving faster training convergence, and delivering high-quality outputs.},
+  year={2024}
+}
+
+@article{dong2024randomly,
+  abbr = {NeurIPS},
+  title={Randomly Pivoted V-optimal Design: Fast Data Selection under Low Intrinsic Dimension},
+  author={Dong*, Yijun and  Pan*, Xiang and Phan*, Hoang and  Lei, Qi},
+  selected = {true},
+  journal={Machine Learning and Compression Workshop},
+  published={true},
+  abstract={Despite the ubiquitous high-dimensionalities brought about by the increasing sizes of models and data, low intrinsic dimensions are commonly found in many high-dimensional learning problems (\eg finetuning). To explore sample efficient learning that leverages such low intrinsic dimensions, we introduce randomly pivoted V-optimal design (RPVopt), a fast data selection algorithm that combines dimension reduction via sketching and optimal experimental design. Given a large dataset with $N$ samples in a high dimension $d$, RPVopt first reduces the dimensionality from $d$ to $m \ll d$ by embedding the data to a random low-dimensional subspace via sketching. Then a coreset of size $n > m$ is selected based on the low-dimensional sketched data through an efficient two-stage random pivoting algorithm. With a fast embedding matrix for sketching, RPVopt achieves an asymptotic complexity of $O(Nd+Nnm)$, linear in the full data size, data dimension, and coreset size. With extensive experiments in both regression and classification settings, we demonstrate the empirical effectiveness of RPVopt in data selection for finetuning vision tasks.},
+  year={2024}
+}
 
 @article{phan2024controllable,
   abbr = {ICML},
