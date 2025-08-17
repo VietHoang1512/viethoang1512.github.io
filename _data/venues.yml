@@ -22,5 +22,9 @@
   url: https://icml.cc/
   color: "#4E6C50"
 
+"ICCV":
+  url: https://iccv.thecvf.com/
+  color: "#820000"
+
 "Preprint":
   color: "#ffdddd"
