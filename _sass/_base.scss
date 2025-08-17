@@ -493,25 +493,47 @@ footer.sticky-bottom {
         max-width: 200px;
       }
       .abbr {
-        height: 2rem;
-        margin-bottom: 0.5rem;
+        /* was: height: 2rem; -> allow stacking when award exists */
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem; /* space between abbr and award */
+
+        /* make both badges block-level and full width */
+        abbr,
+        .award {
+          display: block;
+          width: 100%;
+          box-sizing: border-box;
+          text-align: center;
+          padding: 0.25rem 1rem;
+          line-height: 1.2; /* keeps multi-line tidy */
+          border-radius: 0.25rem; /* optional: consistent corners */
+        }
+
+        /* keep your existing abbr styling, just ensure the link fills the box */
         abbr {
-          display: inline-block;
           background-color: var(--global-theme-color);
-          padding-left: 1rem;
-          padding-right: 1rem;
+
           a {
+            display: block;         /* fill entire badge */
+            width: 100%;
             color: white;
+
             &:hover {
               text-decoration: none;
             }
           }
         }
+
+        /* your award style, now full width to match abbr */
         .award {
           color: var(--global-theme-color) !important;
           border: 1px solid var(--global-theme-color);
+          background: transparent; /* keep outline look */
         }
       }
+    
       .title {
         font-weight: bolder;
       }
