@@ -1,34 +1,34 @@
 "PAKDD":
   url: http://pakdd.net/
-  color: "#848482"
+  color: "#6d6352"
 
 "NeurIPS":
   url: https://neurips.cc/
-  color: "#0048BA"
+  color: "#2f5aa8"
 
 "ACL":
   url: https://aclanthology.org/venues/acl/
-  color: "#ED1C24"
+  color: "#8a3b62"
 
 "EMNLP":
   url: https://aclanthology.org/venues/emnlp/
-  color: "#F29105"
+  color: "#a86210"
 
 "CVPR":
   url: https://cvpr.thecvf.com/
-  color: "#B284BE"
+  color: "#1f7590"
 
 "AISTATS":
   url: http://aistats.org/aistats2023/
-  color: "#E00422"
+  color: "#a8473a"
 
 "ICML":
   url: https://icml.cc/
-  color: "#4E6C50"
+  color: "#2a7a5e"
 
 "ICCV":
   url: https://iccv.thecvf.com/
-  color: "#820000"
+  color: "#6b4c9a"
 
 "Preprint":
-  color: "#6c757d"
+  color: "#5f6b73"
