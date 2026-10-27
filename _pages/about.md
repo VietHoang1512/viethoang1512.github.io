@@ -12,10 +12,10 @@ profile:
 
 
 news: false  # includes a list of news items
-selected_papers: false # includes a list of papers marked as "selected={true}"
+selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-My name is Hoang Phan, I am a Ph.D. student at New York University Center for Data Science, where I am very fortunate to be advised by Professor [Qi Lei](https://cecilialeiqi.github.io/). Before joining NYU, I was a Research Resident at [VinAI Research](https://www.vinai.io/) (now [Qualcomm AI](https://www.qualcomm.com/research/artificial-intelligence)), working under the supervision of Professor [Trung Le](https://research.monash.edu/en/persons/trung-le).
+My name is Hoang Phan, I am a Ph.D. student at New York University Center for Data Science, where I am very fortunate to be advised by Professor [Qi Lei](https://cecilialeiqi.github.io/). Before joining NYU, I was a Research Resident at [VinAI Research](https://www.vinai.io/) (now [Qualcomm AI](https://www.qualcomm.com/research/artificial-intelligence)), working under the supervision of Professor [Trung Le](https://research.monash.edu/en/persons/trung-le). During my Ph.D., I have interned at [Meta Superintelligence Labs](https://ai.meta.com/), working on user simulators and post-training for agents (2026) and on reasoning and factuality of vision-language models (2025), and at [Amazon](https://www.amazon.science/), working on data mixture selection for LLM pretraining with the Rufus team (2024).
 
-In 2022, I graduated from the honors program at [Hanoi University of Science & Technology (HUST)](https://www.hust.edu.vn/) with a Computer Science Bachelor's degree. During my time here, I was a research student at [Data Science Laboratory](http://ds.soict.hust.edu.vn/), advised by Dr. [Linh Ngo](https://users.soict.hust.edu.vn/linhnv/) and Professor [Khoat Than](https://users.soict.hust.edu.vn/khoattq/).
+My CV is available [here]({{ '/assets/pdf/CV.pdf' | relative_url }}).

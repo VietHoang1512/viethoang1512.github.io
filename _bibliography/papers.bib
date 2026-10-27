@@ -1,8 +1,69 @@
+@article{phan2026rationale,
+  abbr = {NeurIPS},
+  title={Rationale-Guided Policy Optimization: Learning to Reason with Adaptive Rationale Scaffolding},
+  author={Phan, Hoang and Pham, Minh and Pham, Chau and Hegde, Chinmay and Le, Trung and Lei, Qi},
+  selected = {true},
+  journal={Advances in Neural Information Processing Systems},
+  published={true},
+  pdf={https://arxiv.org/abs/2610.07342},
+  abstract={On-policy reinforcement learning has become a central paradigm for improving the reasoning abilities of large language models. However, its effectiveness is often limited by reward sparsity: when a model fails to discover correct trajectories for difficult problems, the optimization process receives little useful signal and may stagnate. Existing approaches mitigate this issue by incorporating off-policy demonstrations, expert traces, or model-generated solutions, but they typically require the auxiliary data to match the format of the reinforcement-learning task, often relying on rejection sampling from stronger models to obtain suitable training trajectories. We introduce Rationale-Guided Policy Optimization (RGPO), a framework that adaptively leverages ground-truth rationale information according to the model's current capability while preserving its freedom to explore. Rather than treating reference solutions as fixed imitation targets, RGPO uses them as temporary scaffolds: rationales help the model generate improved responses, after which only higher-reward, model-generated solutions are transferred back to the original unguided setting. This design allows training to exploit available ground-truth information without requiring off-policy data to follow the same format as the RL task. Across both language-only and vision-language reasoning settings, RGPO consistently improves performance over RLVR baselines, and ablation studies show that adaptive rationale guidance is a key contributor to these gains. These results suggest that RGPO offers a practical and general approach for reducing reward sparsity, stabilizing reinforcement learning, and improving reasoning performance in both text-only and multimodal models.},
+  year={2026}
+}
+
+@article{phan2026beyond,
+  abbr = {ACL},
+  title={Beyond Reasoning Gains: Mitigating General Capabilities Forgetting in Large Reasoning Models},
+  author={Phan, Hoang and Yang, Xianjun and Yao, Kevin and Zhang, Jack and Bi, Shengjie and Tang, Xiaocheng and Khabsa, Madian and Liu, Lijuan and Lei, Deren},
+  selected = {true},
+  journal={Findings of the Association for Computational Linguistics: ACL},
+  published={true},
+  pdf={https://arxiv.org/abs/2510.21978},
+  abstract={Reinforcement learning with verifiable rewards (RLVR) has delivered impressive gains in mathematical and multimodal reasoning and has become a standard post-training paradigm for contemporary language and vision-language models. However, the RLVR recipe introduces a significant risk of capability regression, in which models forget foundational skills after prolonged training without employing regularization strategies. We empirically confirm this concern, observing that open-source reasoning models suffer performance degradation on core capabilities such as perception and faithfulness. While imposing regularization terms like KL divergence can help prevent deviation from the base model, these terms are computed on the current task and therefore do not guarantee preservation of broader knowledge. Meanwhile, commonly used experience replay across heterogeneous domains makes it nontrivial to decide how much training emphasis each objective should receive. To address this, we propose RECAP-a replay strategy with dynamic objective reweighting for general knowledge preservation. Our reweighting mechanism adapts online using short-horizon signals of convergence and instability, shifting the post-training focus away from saturated objectives and toward underperforming or volatile ones. Our method is end-to-end and readily applicable to existing RLVR pipelines without training additional models or heavy tuning. Extensive experiments on benchmarks using Qwen2.5-VL-3B and Qwen2.5-VL-7B demonstrate the effectiveness of our method, which not only preserves general capabilities but also improves reasoning by enabling more flexible trade-offs among in-task rewards.},
+  year={2026}
+}
+
+@article{phan2026mimesis,
+  abbr = {Preprint},
+  title={MIMESIS: Learning User Simulators as Training Environments for Interactive Agents},
+  author={Phan, Hoang and Huynh, Dat and Zhmoginov, Andrey and Zeng, Qi and Mu, Wancen and Cao, Yue and Bi, Shengjie and He, Yun and Oh, Changdae and Lei, Deren},
+  selected = {true},
+  journal={Under review},
+  published={true},
+  pdf={https://arxiv.org/abs/2610.09484},
+  code={https://github.com/VietHoang1512/mimesis},
+  website={https://viethoang1512.github.io/mimesis/},
+  abstract={Training and evaluating interactive language agents typically requires rich user interactions, yet collecting human feedback is expensive and difficult to scale. Simulated users offer a scalable alternative, but they must both resemble real user behavior and provide useful learning experiences for agents. In contrast, most agent-training frameworks rely on off-the-shelf assistant LLMs, whose helpfulness can make them overly cooperative, explicit, and behaviorally homogeneous compared with real users. We introduce MIMESIS, a purpose-built user simulator trained on human conversations with explicit reasoning supervision and 13 realistic behavioral patterns derived from real user interactions. Empirically, our 9B model achieves a SOUL-Index of 65.7, surpassing the strongest frontier model. Compared with Claude-Opus-5, the strongest baseline on RealUserSim and SimulatorArena, MIMESIS improves behavioral fidelity by 13.4 points and reduces Turing distance by 3.6 points, respectively. We then freeze the simulator and train an agent by interacting with the frozen simulator using multi-turn reinforcement learning. Across eight environments, training with MIMESIS yields better agent performance than training with GPT-5.5 under all nine unseen user simulators, demonstrating stronger generalization to new user simulators. Moreover, we propose Coached On-Policy Self-Distillation (CSD), which leverages simulator-generated private reasoning traces and subsequent utterances as feedback on how well the agent addresses user needs. A coach converts this information into concise coaching notes that describe how the agent can better anticipate user needs and adapt its behavior over the course of an interaction. CSD turns this feedback into dense, token-level supervision beyond sparse task rewards, yielding further gains across all nine evaluation user models.},
+  year={2026}
+}
+
+@article{phan2025think,
+  abbr = {EMNLP},
+  title={Think Twice, Generate Once: LLMs Safeguarding by Progressive Self-Reflection},
+  author={Phan, Hoang and Li, Victor and Lei, Qi},
+  selected = {true},
+  journal={Findings of the Association for Computational Linguistics: EMNLP},
+  published={true},
+  pdf={https://arxiv.org/abs/2510.01270},
+  abstract={Large language models (LLMs) have revolutionized natural language processing with their ability to generate coherent and contextually relevant text. However, their deployment raises significant concerns about the potential for generating harmful or inappropriate content. In this paper, we introduce Progressive Self-Reflection (PSR), a novel inference-time technique that empowers LLMs to self-monitor and correct their outputs dynamically. Experimental results demonstrate that applying our proposed method to Llama-3.1-8B-Instruct reduces the attack success rate from 77.5\% to 5.9\%, to Llama-3.1-8B base from 89.7\% to 5.6\%, and to Qwen2.5-7B-Instruct from 44.4\% to 3.8\%, without additional training, while maintaining their original performance on benign tasks. Our approach acts as a test-time scaling method, where additional self-reflection rounds enhance safety at the cost of inference overhead. To balance safety with computational efficiency, we introduce a lightweight self-reflection predictor that estimates the optimal number of reflection rounds based on input complexity. This adaptive mechanism prevents unnecessary self-assessment on benign inputs while ensuring thorough evaluation when encountering potentially harmful content. Our findings suggest that Progressive Self-Reflection serves as a scalable test-time approach, enhancing LLM safety by dynamically allocating computational resources in proportion to the input's risk profile.},
+  year={2025}
+}
+
+@article{phan2025balanced,
+  abbr = {NeurIPS},
+  title={Balanced Locality-Sensitive Hashing Sampling for Lightweight Online Data Selection},
+  author={Phan, Hoang and Dong, Yijun and Wilson, Andrew Gordon and Lei, Qi},
+  selected = {true},
+  journal={Workshop on Optimization for Machine Learning},
+  published={true},
+  pdf={https://neurips.cc/virtual/2025/loc/san-diego/124289},
+  year={2025}
+}
+
 @article{phan2025beyond,
   abbr = {ICCV},
+  selected = {true},
   title     = {Beyond Losses Reweighting: Empowering Multi-Task Learning via the Generalization Perspective},
   author    = {Phan*, Hoang and Tran*, Lam and Tran, Quyen and Tran, Ngoc N. and Truong, Tuan and Lei, Qi and Ho, Nhat and Phung, Dinh and Le, Trung},
-  selected = {true},
   journal={Proceedings of the IEEE/CVF International Conference on Computer Vision},
   pdf={https://arxiv.org/abs/2211.13723},
   published={true},
@@ -15,9 +76,9 @@
 
 @article{phan2025toward,
   abbr = {ICCV},
+  selected = {true},
   title={Toward a Holistic Approach to Continual Model Merging},
   author={Hoang Phan and Sungmin Cha and Tung Lam Tran and Qi Lei},
-  selected = {true},
   journal={Workshop on Continual Learning in Computer Vision},
   pdf={https://openreview.net/forum?id=VtPXzFZcGS},
   published={true},
@@ -28,6 +89,7 @@
 
 @article{pham2024personalized,
   abbr={CVPR},
+  selected = {false},
   title={Personalized Large Vision-Language Models},
   author={Pham, Chau and Phan, Hoang and Doermann, David and Tian, Yunjie},
   journal={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops},
@@ -45,9 +107,9 @@
 
 @article{vuong2025preserving,
   abbr = {CVPR},
+  selected = {false},
   title={Preserving Clusters in Prompt Learning for Unsupervised Domain Adaptation},
   author={Vuong, Tung-Long and Phan, Hoang and Vo, Vy and Bui, Anh and Do, Thanh-Toan and Le, Trung and Phung, Dinh},
-  selected = {true},
   journal={Proceedings of the Computer Vision and Pattern Recognition Conference},
   code={https://github.com/VuongLong/Clustering-Reinforcement-Prompt-Learning},
   published={true},
@@ -59,9 +121,9 @@
 
 @article{phan2024revisit,
   abbr = {Preprint},
+  selected = {true},
   title={Revisiting Data Mixing Through the Lens of Multi-Objective Optimization},
   author={Phan, Hoang},
-  selected = {false},
   published={true},
   pdf={Data_mixing.pdf},
   abstract={Effective pretraining of large language models (LLMs) relies significantly on the strategic composition of training data from various sources. Traditional domain weighting approaches often focus on minimizing either average empirical loss or worst-case domain loss, which can lead to overfitting to either simple or complex domains. To address these limitations, we recast data mixing as a multi-objective optimization problem, enabling the application of multi-objective optimization theory. Furthermore, we propose a hybrid method that leverages both data resampling and domain loss reweighting to directly address the mismatch between the training of proxy models and their base counterparts. Empirically, we evaluate our methodology against established baselines on The Pile, SlimPajama, and Wiki40b datasets, demonstrating its superiority in enhancing performance across diverse domains by speeding up the convergence of the 1B model to $40\%$ compared to traditional training. Our extensive experiments show that our approach not only improves modeling ability across training domains but also surpasses prior methods on downstream tasks.},
@@ -71,9 +133,9 @@
 
 @article{dong2024sketchy,
   abbr = {NeurIPS},
+  selected = {false},
   title={Sketchy Moment Matching: Toward Fast and Provable Data Selection for Finetuning},
   author={Dong*, Yijun and Phan*, Hoang and  Pan*, Xiang  and  Lei, Qi},
-  selected = {true},
   journal={Advances in Neural Information Processing Systems},
   published={true},
   pdf={https://arxiv.org/abs/2407.06120},
@@ -88,9 +150,9 @@
 
 @article{phan2024enhancing,
   abbr = {NeurIPS},
+  selected = {true},
   title={Enhancing Domain Adaptation through Prompt Gradient Alignment},
   author={Phan*, Hoang and  Lam Tran* and Tran*, Quyen and  Le, Trung},
-  selected = {true},
   journal={Advances in Neural Information Processing Systems},
   code={https://github.com/VietHoang1512/PGA},
   published={true},
@@ -103,9 +165,9 @@
 
 @article{phung2024dimsum,
   abbr = {NeurIPS},
+  selected = {false},
   title = {DiMSUM: Diffusion Mamba - A Scalable and Unified Spatial-Frequency Method for Image Generation},
   author = {Phung*, Hao and Dao*, Quan and Dao, Trung and Phan, Hoang and Metaxas, Dimitris N. and Tran, Anh},
-  selected = {true},
   journal={Advances in Neural Information Processing Systems},
   code={https://github.com/VinAIResearch/DiMSUM},
   published={true},
@@ -116,9 +178,9 @@
 
 @article{dong2024randomly,
   abbr = {NeurIPS},
+  selected = {false},
   title={Randomly Pivoted V-optimal Design: Fast Data Selection under Low Intrinsic Dimension},
   author={Dong*, Yijun and  Pan*, Xiang and Phan*, Hoang and  Lei, Qi},
-  selected = {true},
   journal={Machine Learning and Compression Workshop},
   published={true},
   code={https://github.com/Xiang-Pan/sketchy_moment_matching},
@@ -129,6 +191,7 @@
 
 @article{phan2024controllable,
   abbr = {ICML},
+  selected = {true},
   title={Controllable Prompt Tuning For Balancing Group Distributional Robustness},
   author={Phan, Hoang and Wilson, Andrew Gordon and Lei, Qi},
   journal={Proceedings of the 41st International Conference on Machine Learning},
@@ -143,9 +206,9 @@
 
 @article{nguyen2023flat,
   abbr = {NeurIPS},
+  selected = {false},
   title={Flat Seeking Bayesian Neural Networks},
   author={Nguyen, Anh and Vuong, Long and Phan, Hoang and Do, Toan and Phung, Dinh and Le, Trung},
-  selected = {true},
   journal={Advances in Neural Information Processing Systems},
   code={https://github.com/anh-ntv/flat_bnn},
   published={true},
@@ -161,10 +224,10 @@
 
 @article{phan2022global,
   abbr = {AISTATS},
+  selected = {true},
   title={Global-Local Regularization Via Distributional Robustness},
   author={Phan, Hoang and Le, Trung and Phung, Trung and Bui, Tuan Anh and Ho, Nhat and Phung, Dinh},
   journal={Proceedings of The 26th International Conference on Artificial Intelligence and Statistics},
-  selected = {true},
   published={true},
   code={https://github.com/VietHoang1512/GLOT},
   pdf={https://arxiv.org/abs/2203.00553},
@@ -177,23 +240,23 @@
 
 @article{phan2022stochastic,
   abbr = {NeurIPS},
+  selected = {true},
   title={Stochastic Multiple Target Sampling Gradient Descent},
   author={Phan, Hoang and Tran, Ngoc and Le, Trung and Tran, Toan and Ho, Nhat and Phung, Dinh},
   journal={Advances in Neural Information Processing Systems },
   pdf={https://arxiv.org/abs/2206.01934},
   code={https://github.com/VietHoang1512/MT-SGD},
   abstract={Sampling from an unnormalized target distribution is an essential problem with many applications in probabilistic inference. Stein Variational Gradient Descent (SVGD) has been shown to be a powerful method that iteratively updates a set of particles to approximate the distribution of interest. Furthermore, when analysing its asymptotic properties, SVGD reduces exactly to a single-objective optimization problem and can be viewed as a probabilistic version of this single-objective optimization problem. A natural question then arises: "Can we derive a probabilistic version of the multi-objective optimization?". To answer this question, we propose Stochastic Multiple Target Sampling Gradient Descent (MT-SGD), enabling us to sample from multiple unnormalized target distributions. Specifically, our MT-SGD conducts a flow of intermediate distributions gradually orienting to multiple target distributions, which allows the sampled particles to move to the joint high-likelihood region of the target distributions. Interestingly, the asymptotic analysis shows that our approach reduces exactly to the multiple-gradient descent algorithm for multi-objective optimization, as expected. Finally, we conduct comprehensive experiments to demonstrate the merit of our approach to multi-task learning.},
-  selected = {true},
   published={true},
   year={2022}
 }
 
 @article{phan2022reducing,
   abbr = {PAKDD},
+  selected = {true},
   title={Reducing Catastrophic Forgetting in Neural Networks via Gaussian Mixture Approximation},
   author={Phan*, Hoang and Tuan Anh*, Phan and Nguyen*, Son and Linh, Ngo Van and Than, Khoat},
   journal={Advances in Knowledge Discovery and Data Mining. PAKDD. Lecture Notes in Computer Science. Springer },
-  selected = {true},
   published={true},
   pdf={PAKDD_paper.pdf},
   code={https://github.com/anhpt1997/ucb_cl},
@@ -205,10 +268,10 @@
 
 @article{phan2021matching,
   abbr = {EMNLP},
-  title={Matching the statements: A simple and accurate model for key point analysis},
-  author={Phan, Hoang and Nguyen, Long and Doan, Khanh},
-  journal={Proceedings of the 8th Workshop on Argument Mining },
   selected = {true},
+  title={Matching the statements: A simple and accurate model for key point analysis},
+  author={Phan, Hoang and Nguyen, Long and Nguyen, Long and Doan, Khanh},
+  journal={Proceedings of the 8th Workshop on Argument Mining },
   pdf={https://aclanthology.org/2021.argmining-1.17/},
   code={https://github.com/VietHoang1512/KPA},
   abstract={Key Point Analysis (KPA) is one of the most essential tasks in building an Opinion Summarization system, which is capable of generating key points for a collection of arguments toward a particular topic. Furthermore, KPA allows quantifying the coverage of each summary by counting its matched arguments. With the aim of creating high-quality summaries, it is necessary to have an in-depth understanding of each individual argument as well as its universal semantic in a specified context. In this paper, we introduce a promising model, named Matching the Statements (MTS) that incorporates the discussed topic information into arguments/key points comprehension to fully understand their meanings, thus accurately performing ranking and retrieving best-match key points for an input argument. Our approach has achieved the 4th place in Track 1 of the Quantitative Summarization – Key Point Analysis Shared Task by IBM, yielding a competitive performance of 0.8956 (3rd) and 0.9632 (7th) strict and relaxed mean Average Precision, respectively.},
@@ -219,10 +282,10 @@
 
 @article{nguyen2021contrastive,
   abbr = {CVPR},
+  selected = {false},
   title={Contrastive learning for natural language-based vehicle retrieval},
   author={Nguyen, Tam and Pham, Quang and Doan, Linh  and Trinh, Hoang  and Nguyen, Anh and Phan, Hoang},
   journal={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops },
-  selected = {true},
   published={true},
   pdf={https://openaccess.thecvf.com/content/CVPR2021W/AICity/html/Nguyen_Contrastive_Learning_for_Natural_Language-Based_Vehicle_Retrieval_CVPRW_2021_paper.html},
   code={https://github.com/VietHoang1512/CVPR-track-5},

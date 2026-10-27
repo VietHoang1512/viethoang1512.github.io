@@ -258,6 +258,16 @@ blockquote {
         i::before {
           color: var(--global-theme-color);
         }
+        svg.x-logo {
+          fill: var(--global-theme-color);
+        }
+      }
+      // Font Awesome 5 has no X logo, so it is inlined as an SVG sized like the icon font
+      svg.x-logo {
+        width: 1em;
+        height: 1em;
+        vertical-align: -0.125em;
+        fill: var(--global-text-color);
       }
     }
   }
