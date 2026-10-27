@@ -13,6 +13,7 @@ profile:
 
 news: false  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
+years: [2026, 2025, 2024, 2023, 2022] # years shown in the selected papers list
 social: true  # includes social icons at the bottom of the page
 ---
 
