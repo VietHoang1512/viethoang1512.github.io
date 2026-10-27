@@ -258,16 +258,6 @@ blockquote {
         i::before {
           color: var(--global-theme-color);
         }
-        svg.x-logo {
-          fill: var(--global-theme-color);
-        }
-      }
-      // Font Awesome 5 has no X logo, so it is inlined as an SVG sized like the icon font
-      svg.x-logo {
-        width: 1em;
-        height: 1em;
-        vertical-align: -0.125em;
-        fill: var(--global-text-color);
       }
     }
   }
@@ -503,15 +493,11 @@ footer.sticky-bottom {
         max-width: 200px;
       }
       .abbr {
-        /* was: height: 2rem; -> allow stacking when award exists */
         height: auto;
         display: flex;
         flex-direction: column;
-        gap: 0.25rem; /* space between abbr and award */
 
-        /* make both badges block-level and full width */
-        abbr,
-        .award {
+        abbr {
           display: block;
           width: 100%;
           box-sizing: border-box;
@@ -535,17 +521,14 @@ footer.sticky-bottom {
             }
           }
         }
-
-        /* your award style, now full width to match abbr */
-        .award {
-          color: var(--global-theme-color) !important;
-          border: 1px solid var(--global-theme-color);
-          background: transparent; /* keep outline look */
-        }
       }
     
       .title {
         font-weight: bolder;
+      }
+      .award {
+        color: var(--global-award-color);
+        font-size: 1.1rem;
       }
       .author {
         a {

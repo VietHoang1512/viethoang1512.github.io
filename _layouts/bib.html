@@ -18,11 +18,6 @@
           <abbr class="badge d-block w-100 rounded text-center" {% if venue_style %}{{venue_style}}{% endif %}>
             <a class="d-block w-100" href="{{site.data.venues[entry.abbr].url}}">{{entry.abbr}}</a>
           </abbr>
-          {%- if entry.award -%}
-            <span class="award badge d-block w-100 rounded text-center mt-1">
-              {{ entry.award }}
-            </span>
-          {%- endif -%}
         {%- else -%}
           <abbr class="badge d-block w-100 rounded text-center">{{entry.abbr}}</abbr>
         {%- endif -%}
@@ -131,6 +126,9 @@
           <div class="periodical">
             {{ periodical | strip }}
           </div>
+          {%- if entry.award %}
+          <div class="award">{{ entry.award }}</div>
+          {%- endif %}
         {%- endif %}
         
           <!-- Links/Buttons -->
