@@ -3,7 +3,9 @@
             <h2>selected publications</h2>
             <p class="text-muted">(*) denotes equal contribution</p>
             {%- for y in page.years %}
-            <h2 class="year">{{ y }}</h2>
-            {% bibliography -f papers -q @*[selected=true,year={{ y }}]* %}
+            <div class="year-group">
+              <h2 class="year">{{ y }}</h2>
+              {% bibliography -f papers -q @*[selected=true,year={{ y }}]* %}
+            </div>
             {%- endfor %}
           </div>

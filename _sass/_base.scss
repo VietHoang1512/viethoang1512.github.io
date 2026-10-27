@@ -109,7 +109,7 @@ blockquote {
 
 @media (min-width: 576px) {
   .profile {
-    width: 30%;
+    width: 22%;
     .address {
       p { display: block; }
     }
@@ -472,13 +472,24 @@ footer.sticky-bottom {
       font-size: 1.5rem;
     }
   }
+  .year-group {
+    position: relative;
+    border-top: 1px solid var(--global-divider-color);
+    padding-top: 1.5rem;
+    margin-top: 2rem;
+  }
   h2.year {
     color: var(--global-divider-color);
-    border-top: 1px solid var(--global-divider-color);
-    padding-top: 1rem;
-    margin-top: 2rem;
-    margin-bottom: -2rem;
-    text-align: right;
+    margin-bottom: 1rem;
+  }
+  // on wider screens, tuck the year into the empty space under the venue badges
+  @media (min-width: 576px) {
+    h2.year {
+      position: absolute;
+      left: 0;
+      bottom: 2rem;
+      margin: 0;
+    }
   }
   ol.bibliography {
     list-style: none;
