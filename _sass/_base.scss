@@ -246,6 +246,7 @@ blockquote {
 // Social (bottom)
 
 .social {
+  clear: both;
   text-align: center;
   .contact-icons {
     font-size: 4rem;
@@ -458,7 +459,7 @@ footer.sticky-bottom {
 // Publications
 
 .publications {
-  margin-top: 2rem;
+  margin-top: 0.5rem;
   h1 {
     color: var(--global-theme-color);
     font-size: 2rem;
@@ -473,10 +474,11 @@ footer.sticky-bottom {
     }
   }
   .year-group {
+    clear: both;
     position: relative;
     border-top: 1px solid var(--global-divider-color);
     padding-top: 1.5rem;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
   }
   h2.year {
     color: var(--global-divider-color);
